@@ -2,6 +2,8 @@ const express = require('express');
 const noteData = require('./db/db.json');
 const path = require('path');
 const fs = require('fs');
+const uuid = require('./helpers/uuid');
+
 
 const PORT = 3001;
 const app = express();
@@ -10,6 +12,26 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static('public'));
+
+const writeToFile = (destination, content) =>
+  fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
+    err ? console.error(err) : console.info(`\nData written to ${destination}`)
+  );
+
+const readAndAppend = (newNote, file) => {
+  fs.readFile(file, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      const notes = JSON.parse(data);
+      notes.push(newNote);
+      //notes.forEach((note, index) => {
+      //  note.id = index + 1;
+      //};
+      writeToFile(file, notes);
+    }
+  }
+)};
 
 //HTML routes
 
@@ -47,24 +69,25 @@ app.post('/api/notes', (req,res) => {
  //deconstruct to create the request body
  const { title, text} = req.body;
 
- if (title && text) {
-  const newNote = {
-    title,
-    text,
-  };
+  if (title && text) {
+    const newNote = {
+      title,
+      text,
+      noteId: uuid(),
+    };
 
-  const response = {
-    status: 'success',
-    body: newNote,
-  };
-  
-  console.log(response);
-  res.status(201).json(response);
-} else {
-  res.status(500).json('Error posting note');
-}
+    readAndAppend(newNote, 'db/db.json');
+   
+    const response = {
+      status: 'success',
+      body: newNote,
+    };
+
+    res.json(response);
+  } else {
+    res.error('Error adding note');
+  }
 });
-
 
 
 app.listen(PORT, () =>
