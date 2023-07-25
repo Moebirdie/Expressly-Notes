@@ -4,7 +4,9 @@
 
 ## Description
 
-Expressly Notes is an application for note taking and demonstrates the use of APIs using the Express.js package.  The front-end of this application was designed and coded by https://github.com/coding-boot-camp/miniature-eureka.  The data for this application is stored in a json file rather than a database as the focus is on demonstrating the use of APIs and linking a front-end to a back-end via APIs. A helper.js file was used to create random unique ids. This application also demonstrates a basic understanding of Heroku and is deployed via the Heroku cloud application platform.  
+Expressly Notes is an application for note taking and demonstrates the use of APIs using the Express.js package.  The front-end of this application was designed and coded by https://github.com/coding-boot-camp/miniature-eureka.  The data for this application is stored in a json file rather than a database as the focus is on demonstrating the use of APIs and linking a front-end to a back-end via APIs. A helper.js file was used to create random unique ids.  
+  
+This application also demonstrates a basic understanding of Heroku and is deployed via the Heroku cloud application platform.  
 
 Link to deployed application: [https://moebirdie.github.io/Inquirer-README-Generator/](https://moebirdie.github.io/Inquirer-README-Generator/)
 
