@@ -1,12 +1,27 @@
 [
     {
-        "title": "Fourth Note",
-        "text": "Note",
-        "id": "71e2"
+        "title": "Shop for ingredients",
+        "text": "sirloin steak\ntomatoes\nonions\ngarlic\nspring garden mix\npears\n",
+        "id": "3c09"
     },
     {
-        "title": "New note 1",
-        "text": "note",
-        "id": "8cb5"
+        "title": "Shop for dinner ware",
+        "text": "wine glasses\nnapkins\ntablecloth\nserving dishes",
+        "id": "859b"
+    },
+    {
+        "title": "Write invitations",
+        "text": "Get list of invitees",
+        "id": "5885"
+    },
+    {
+        "title": "Gather flowers",
+        "text": "pull out all vases\ncut flowers from garden and arrange in vases\nset about the house",
+        "id": "50df"
+    },
+    {
+        "title": "Ready music",
+        "text": "select mood appropriate music and arrange the albums accordingly",
+        "id": "2c03"
     }
 ]
