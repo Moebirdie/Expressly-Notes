@@ -8,7 +8,7 @@ Expressly Notes is an application for note taking and demonstrates the use of AP
   
 This application also demonstrates a basic understanding of Heroku and is deployed via the Heroku cloud application platform.  
 
-Link to deployed application: [[https://expresslynotes-727fd338b757.herokuapp.com/notes](https://expresslynotes-727fd338b757.herokuapp.com/notes)]
+Link to deployed application: [https://expresslynotes-727fd338b757.herokuapp.com/notes](https://expresslynotes-727fd338b757.herokuapp.com/notes)
 
 ## Table of Contents
 
