@@ -60,7 +60,7 @@ app.get('/api/notes', (req, res) => {
 // returns a specific note
 
 app.get('/api/notes/:id', (req, res) => {
-  const noteData = require('./db/db.json');
+  const noteData = require('db/db.json');
   console.log(req.params)
   const requestedId = req.params.id
   for (let i = 0; i < noteData.length; i++) {
@@ -74,7 +74,7 @@ app.get('/api/notes/:id', (req, res) => {
 
 //Deletes a note
 app.delete('/api/notes/:id', (req, res) => {
-  readAndFilter(req.params.id, './db/db.json');
+  readAndFilter(req.params.id, 'db/db.json');
   res.json({message: "item deleted successfully"});
 });
 
